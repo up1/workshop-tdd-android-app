@@ -1,0 +1,19 @@
+-  request:
+      method: GET
+      url: /gettruepoint/1
+ 
+   response:
+      status: 200
+      headers:
+         content-type: application/json
+      file: response.json
+
+-  request:
+      method: GET
+      url: /gettruepoint/2
+ 
+   response:
+      status: 200
+      headers:
+         content-type: application/json
+      file: fail_case01.json
