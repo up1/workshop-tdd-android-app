@@ -36,7 +36,7 @@ class FoodRepositoryReal(private val sharedPreferences: SharedPreferences) : Foo
         editor.apply()
     }
 
-    private inline fun <reified T> Gson.fromJson(json: String): T = this.fromJson<T>(json, object : TypeToken<T>() {}.type)
+    private inline fun <reified T> Gson.fromJson(json: String) = this.fromJson<T>(json, object : TypeToken<T>() {}.type)
 
     override fun getFavoriteFoods(): List<Food> {
         val favoritesString = sharedPreferences.getString(FAVORITES_KEY, null)
