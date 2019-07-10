@@ -2,6 +2,7 @@ package com.example.workshoptesting
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.example.workshoptesting.searchresult.searchResultsIntent
 import kotlinx.android.synthetic.main.activity_search.*
 
 class SearchActivity : AppCompatActivity() {
