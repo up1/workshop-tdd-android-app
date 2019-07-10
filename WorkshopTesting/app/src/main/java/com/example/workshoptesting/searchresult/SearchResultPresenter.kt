@@ -13,7 +13,7 @@ class SearchResultsPresenter(private val repository: FoodRepository) :
         fun showRecipes(recipes: List<Food>)
         fun showEmptyRecipes()
         fun showError()
-        fun refreshFavoriteStatus(recipeIndex: Int)
+        fun refreshFavoriteStatus(position: Int)
     }
 
     private var recipes: List<Food>? = null
@@ -47,7 +47,6 @@ class SearchResultsPresenter(private val repository: FoodRepository) :
             view?.refreshFavoriteStatus(recipeIndex)
         }
     }
-
 
     fun removeFavorite(recipe: Food) {
         repository.removeFavorite(recipe)

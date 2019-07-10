@@ -21,7 +21,7 @@ interface FoodAPI {
                 .create()
 
             val retrofit = Retrofit.Builder()
-                .baseUrl("http://food2fork.com/api/")
+                .baseUrl("https://food2fork.com/api/")
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build()
 

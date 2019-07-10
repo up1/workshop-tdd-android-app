@@ -1,6 +1,6 @@
 package com.example.workshoptesting.api
 
-data class FoodsContainer(val foods: List<Food>)
+data class FoodsContainer(val recipes: List<Food>)
 
 data class Food(
     val recipeId: String,

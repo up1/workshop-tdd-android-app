@@ -54,7 +54,7 @@ class FoodRepositoryReal(private val sharedPreferences: SharedPreferences) : Foo
                 if (response != null && response.isSuccessful) {
                     val foodsContainer = response.body()
                     markFavorites(foodsContainer)
-                    callback.onSuccess(foodsContainer?.foods)
+                    callback.onSuccess(foodsContainer?.recipes)
                 } else {
                     callback.onError()
                 }
@@ -70,7 +70,7 @@ class FoodRepositoryReal(private val sharedPreferences: SharedPreferences) : Foo
         if (recipesContainer != null) {
             val favoriteRecipes = getFavoriteFoods()
             if (favoriteRecipes.isNotEmpty()) {
-                for (item in recipesContainer.foods) item.isFavorited = favoriteRecipes.map { it.recipeId }.contains(item.recipeId)
+                for (item in recipesContainer.recipes) item.isFavorited = favoriteRecipes.map { it.recipeId }.contains(item.recipeId)
             }
         }
     }

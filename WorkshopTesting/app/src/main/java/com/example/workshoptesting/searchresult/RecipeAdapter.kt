@@ -35,7 +35,7 @@ class RecipeAdapter(private var items: List<Food>, private val listener: Listene
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(item: Food, listener: Listener) = with(itemView) {
-            Glide.with(context).load(item.imageUrl).into(imageView)
+            Glide.with(context).load(item.imageUrl.replace("http", "https")).into(imageView)
             title.text = item.title
 
             if (item.isFavorited) {

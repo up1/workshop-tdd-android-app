@@ -37,7 +37,6 @@ class SearchResultsActivity : AppCompatActivity(), SearchResultsPresenter.View {
 
         presenter.search(query)
         retry.setOnClickListener { presenter.search(query) }
-
     }
 
     override fun showEmptyRecipes() {
@@ -100,6 +99,5 @@ class SearchResultsActivity : AppCompatActivity(), SearchResultsPresenter.View {
         finish()
         return true
     }
-
 
 }
