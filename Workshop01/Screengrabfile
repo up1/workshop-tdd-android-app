@@ -4,5 +4,6 @@ tests_apk_path('app/build/outputs/apk/androidTest/debug/app-debug-androidTest.ap
 locales(['en-US'])
 clear_previous_screenshots(true)
 
+#fastlane screengrab init
 #gradlew clean assembleDebug assembleAndroidTest
 #fastlane screengrab

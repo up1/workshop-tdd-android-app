@@ -27,9 +27,9 @@ import tools.fastlane.screengrab.locale.LocaleTestRule
 @RunWith(AndroidJUnit4::class)
 class MainActivityWithScreenGrabTest {
 
-    @get:ClassRule
-    @JvmField
-    val localeTestRule = LocaleTestRule()
+//    @get:ClassRule
+//    @JvmField
+//    val localeTestRule = LocaleTestRule()
 
     @get:Rule
     @JvmField
@@ -37,20 +37,20 @@ class MainActivityWithScreenGrabTest {
 
     @Test
     fun mainActivityTest() {
-        Screengrab.setDefaultScreenshotStrategy(UiAutomatorScreenshotStrategy())
+//        Screengrab.setDefaultScreenshotStrategy(UiAutomatorScreenshotStrategy())
 
         val appContext = InstrumentationRegistry.getTargetContext()
         //TODO
 
         mActivityTestRule.launchActivity(Intent());
-        Screengrab.screenshot("step_01")
+//        Screengrab.screenshot("step_01")
 
         // Assert
         onView(withId(R.id.messageTextView))
             .check(matches(withText("Hello World!")))
             .check(matches(isDisplayed()))
 
-        Screengrab.screenshot("step_02")
-        Screengrab.screenshot("step_03")
+//        Screengrab.screenshot("step_02")
+//        Screengrab.screenshot("step_03")
     }
 }

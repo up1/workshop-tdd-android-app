@@ -22,7 +22,7 @@ class RobolectricMainActivityTest {
 
         // Assert
         val show = activity.findViewById(R.id.messageTextView) as TextView
-        assertEquals("Hello World!]", show.text);
+        assertEquals("Hello World!", show.text);
     }
 
 }
