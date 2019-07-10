@@ -110,3 +110,60 @@ class RobolectricMainActivityTest {
 
 }
 ```
+
+### Working with fastlane screengrab
+/app/build.gradle
+```
+android {
+   testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
+}
+}
+```
+
+Test case
+```
+class MainActivityWithScreengrabTest {
+
+    @get:ClassRule
+    @JvmField
+    val localeTestRule = LocaleTestRule()
+
+    @get:Rule
+    val activityRule = ActivityTestRule(MainActivity::class.java)
+
+    @Test fun open_main_page() {
+        Screengrab.setDefaultScreenshotStrategy(UiAutomatorScreenshotStrategy())
+        Screengrab.screenshot("step_01")
+        onView(withText("Hello World!"))
+            .check(matches(isDisplayed()))
+    }
+
+}
+```
+
+How to run ?
+```
+$fastlane screengrab init
+
+[✔] 🚀
+[09:01:51]: Successfully created new Screengrabfile at './Screengrabfile'
+
+Edit file ./Screengrabfile
+```
+app_package_name('com.example.demo01')
+app_apk_path('app/build/output/apk/debug/app-debug.apk')
+tests_apk_path('app/build/output/apk/androidTest/app-debug-androidTest.apk')
+locales(['en-US'])
+clear_previous_screenshots(true)
+```
+
+// Run
+```
+$./gradlew assembleDebug assembleAndroidTest
+$fastlane screengrab
+```
+```
