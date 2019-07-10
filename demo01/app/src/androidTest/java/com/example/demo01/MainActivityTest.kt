@@ -15,7 +15,8 @@ class MainActivityTest {
     val activityRule = ActivityTestRule(MainActivity::class.java)
 
     @Test fun open_main_page() {
-        onView(withText("Hello World!")).check(matches(isDisplayed()))
+        onView(withText("Hello World!"))
+            .check(matches(isDisplayed()))
     }
 
 }
