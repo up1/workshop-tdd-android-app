@@ -22,10 +22,10 @@ class SearchResultsPresenter(private val repository: FoodRepository) :
         view?.showLoading()
 
         repository.getFoods(query, object : RepositoryCallback<List<Food>> {
-            override fun onSuccess(recipes: List<Food>?) {
-                this@SearchResultsPresenter.recipes = recipes
-                if (recipes != null && recipes.isNotEmpty()) {
-                    view?.showRecipes(recipes)
+            override fun onSuccess(t: List<Food>?) {
+                this@SearchResultsPresenter.recipes = t
+                if (t != null && t.isNotEmpty()) {
+                    view?.showRecipes(t)
                 } else {
                     view?.showEmptyRecipes()
                 }

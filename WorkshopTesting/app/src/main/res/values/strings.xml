@@ -11,4 +11,5 @@
     <string name="add_remove_favorite">Add or remove favorite</string>
     <string name="recipe_image">Recipe image</string>
     <string name="loading">Loading&#8230;</string>
+    <string name="search_query_required">Please, input one or more !</string>
 </resources>
