@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">WorkshopTesting</string>
+    <string name="search_title">Search for ingredients</string>
+    <string name="results_title">Results</string>
+    <string name="favorites_title">Favorites</string>
+    <string name="recipe_title">Recipe</string>
+    <string name="main_title">Welcome to IngrediSearch!</string>
+    <string name="search">Search</string>
+    <string name="search_query_required">Please, input one or more ingredients!</string>
+    <string name="search_header">Enter the ingredients</string>
+    <string name="favorites">Favorites</string>
+    <string name="search_hint">eggs, ham, cheese</string>
+    <string name="error">An error occurred</string>
+    <string name="retry">Retry</string>
+    <string name="noresults">No results for your query</string>
+    <string name="nofavorites">No favorites yet</string>
+    <string name="add_remove_favorite">Add or remove favorite</string>
+    <string name="recipe_image">Recipe image</string>
+    <string name="loading">Loading&#8230;</string>
 </resources>
