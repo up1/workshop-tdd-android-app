@@ -1,4 +1,10 @@
 # Workshop TDD with Android App
+* Monitoring # of methods
+* Unit testing with [JUnit](https://github.com/junit-team/junit4/wiki)
+* Unit testing for UI with [Robolectric](http://robolectric.org/)
+* UI testing with [Espresso](https://developer.android.com/training/testing/espresso)
+* Code coverage with [Jacoco](https://github.com/jacoco/jacoco) (Hacking)
+* Snapshot UI with [Fastlane screengrab](https://docs.fastlane.tools/actions/screengrab/)
 
 ### Enable dex count in project
 File build.gradle
