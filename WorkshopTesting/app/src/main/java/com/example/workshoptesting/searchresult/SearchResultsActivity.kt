@@ -77,7 +77,7 @@ class SearchResultsActivity : AppCompatActivity(), SearchResultsPresenter.View {
         list.layoutManager = LinearLayoutManager(this)
         list.adapter = RecipeAdapter(recipes, object : RecipeAdapter.Listener {
             override fun onClickItem(item: Food) {
-//                startActivity(recipeIntent(recipe.sourceUrl))
+                startActivity(recipeDetailIntent(item.sourceUrl.replace("http", "https")))
             }
 
             override fun onAddFavorite(item: Food) {
