@@ -65,3 +65,42 @@ task jacocoTestReport(type: JacocoReport, dependsOn: ['testDebugUnitTest', 'crea
     ])
 }
 ```
+
+### Working with [Robolectric](http://robolectric.org/)
+File /app/build.gradle
+```
+android {
+   ...
+   testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
+}
+
+dependencies {
+    testImplementation "org.robolectric:robolectric:4.3"
+}
+```
+
+Test case in /src/test
+```
+@RunWith(RobolectricTestRunner::class)
+class RobolectricMainActivityTest {
+
+    @Test fun `check data in first page`() {
+        // Arrange
+        val activity = buildActivity(MainActivity::class.java)
+            .create()
+            .resume()
+            .get()
+
+        // Act
+
+        // Assert
+        val show = activity.findViewById(R.id.show) as TextView
+        assertEquals("Hello World!", show.text);
+    }
+
+}
+```
