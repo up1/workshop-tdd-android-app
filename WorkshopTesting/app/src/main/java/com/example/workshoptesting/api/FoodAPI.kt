@@ -23,6 +23,7 @@ interface FoodAPI {
             val retrofit = Retrofit.Builder()
                 .baseUrl("https://food2fork.com/api/")
                 .addConverterFactory(GsonConverterFactory.create(gson))
+                .client(OkHttp.instance)
                 .build()
 
             return retrofit.create(FoodAPI::class.java)
