@@ -5,7 +5,7 @@
 * UI testing with [Espresso](https://developer.android.com/training/testing/espresso)
 * Code coverage with [Jacoco](https://github.com/jacoco/jacoco) (Hacking)
 * Snapshot UI with [Fastlane screengrab](https://docs.fastlane.tools/actions/screengrab/)
-* [More Workshop](https://github.com/up1/workshop-tdd-android-app/tree/master/WorkshopTesting)
+* [More Workshop](https://github.com/up1/workshop-tdd-android-app/wiki/Workshop-Food)
 
 ### Enable dex count in project
 File build.gradle
